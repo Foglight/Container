@@ -8,8 +8,7 @@ You can download the files into your folder <folderpath>, then deploy the servic
 kubectl create -f <folderpath>
 ```
 Heapster Default Configuration:
-| Configured Item | Configured Value |
-| ------ | ------ |
-| Namespace | kube-system |
-| Name | heapster |
+ - Namespace: kube-system
+ - Name: heapster
+
 The above configuration can be used to configure the Kubernetes Agent Properties (Heapster Namespace and Heapster Service Name).
