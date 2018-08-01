@@ -7,9 +7,10 @@ Prerequisite:
  - service account already exist
 
 Tools
- - serviceaccount-token-retriver.bat: generate token for service account under windows platform.
- - serviceaccount-token-retriver.sh: linux shell script to generate service account token to a file
-
+ - kubeconfig-updater.bat: generate token for service account under windows platform, supported cloud platforms (AKS, GKE)
+ - kubeconfig-updater.sh: linux shell script to generate service account token to a file, supported cloud platforms (AKS, GKE)
+ - 
+ 
 How to use:
 Open the .sh or .bat file and change the SERVICEACCOUNT_NAME and SERVICEACCOUNT_NAMESPACE to your service account name and namespaces.
 Then run the script in the command line or shell. 

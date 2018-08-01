@@ -1,6 +1,12 @@
 @echo off
-set SERVICEACCOUNT_NAME=kubeadm
+set SERVICEACCOUNT_NAME=kubeagentadmin
 set SERVICEACCOUNT_NAMESPACE=kube-system
+set KUBECONFIG_FILEPATH=.\kubeconfig
+
+call kubectl config view current --minify=true --flatten -o yaml > %KUBECONFIG_FILEPATH%
+set KUBECONFIG=%KUBECONFIG_FILEPATH%
+echo Check kubernetes version using update with authority data kubeconfig at %KUBECONFIG_FILEPATH%
+call kubectl version
 
 set DESC_SERVICEACCOUNT=call kubectl describe serviceaccount %SERVICEACCOUNT_NAME% --namespace %SERVICEACCOUNT_NAMESPACE%
 for /F "tokens=2 delims=:" %%G in ('%DESC_SERVICEACCOUNT% ^| find "Mountable secrets:"') do set SERVICEACCOUNT_SECRET_NAME=%%G
