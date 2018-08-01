@@ -7,8 +7,8 @@ Prerequisite:
  - service account already exist
 
 Tools
- - kubeconfig-updater.bat: windows batch file to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (AKS, GKE)
- - kubeconfig-updater.sh: linux shell script to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (AKS, GKE)
+ - kubeconfig-updater.bat: windows batch file to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (AKS, GKE, Openshift, EKS)
+ - kubeconfig-updater.sh: linux shell script to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (AKS, GKE, Openshift, EKS)
  - kubeconfig-ibm-updater.bat: windows batch file to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (IBM Cloud Kubernetes Service)
  - kubeconfig-ibm-updater.sh: linux shell script to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (IBM Cloud Kubernetes Service)
  
