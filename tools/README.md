@@ -7,9 +7,10 @@ Prerequisite:
  - service account already exist
 
 Tools
- - kubeconfig-updater.bat: generate token for service account under windows platform, supported cloud platforms (AKS, GKE)
- - kubeconfig-updater.sh: linux shell script to generate service account token to a file, supported cloud platforms (AKS, GKE)
- - 
+ - kubeconfig-updater.bat: windows batch file to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (AKS, GKE)
+ - kubeconfig-updater.sh: linux shell script to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (AKS, GKE)
+ - kubeconfig-ibm-updater.bat: windows batch file to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (IBM Cloud Kubernetes Service)
+ - kubeconfig-ibm-updater.sh: linux shell script to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (IBM Cloud Kubernetes Service)
  
 How to use:
 Open the .sh or .bat file and change the SERVICEACCOUNT_NAME and SERVICEACCOUNT_NAMESPACE to your service account name and namespaces.
