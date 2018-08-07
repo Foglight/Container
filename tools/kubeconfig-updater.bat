@@ -1,5 +1,5 @@
 @echo off
-set SERVICEACCOUNT_NAME=kubeadm
+set SERVICEACCOUNT_NAME=kubeagentadmin
 set SERVICEACCOUNT_NAMESPACE=kube-system
 
 set DESC_SERVICEACCOUNT=call kubectl describe serviceaccount %SERVICEACCOUNT_NAME% --namespace %SERVICEACCOUNT_NAMESPACE%
