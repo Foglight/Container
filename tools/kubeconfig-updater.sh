@@ -11,7 +11,7 @@ echo $KUBE_SERVICEACCOUNT_SECRET_TOKEN > $SERVICEACCOUNT_NAME.token
 echo Service Account $SERVICEACCOUNT_NAME secret $KUBE_SERVICEACCOUNT_SECRET token is generated at $SERVICEACCOUNT_NAME.token
 
 #Update default kubeconfig, add new context with new user credential to the current cluster.
-KUBE_CURRENT_CLUSTER=$(kubectl config view current -o jsonpath={.contexts[0].context.cluster})
+KUBE_CURRENT_CLUSTER=$(kubectl config view current --minify=true -o jsonpath={.contexts[0].context.cluster})
 echo Current kubernetes configured cluster in the current context is $KUBE_CURRENT_CLUSTER
 
 kubectl config set-credentials new-user --token $KUBE_SERVICEACCOUNT_SECRET_TOKEN

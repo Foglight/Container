@@ -13,7 +13,7 @@ set SERVICEACCOUNT_SECRET_TOKEN=%SERVICEACCOUNT_SECRET_TOKEN: =%
 echo %SERVICEACCOUNT_SECRET_TOKEN% > %SERVICEACCOUNT_NAME%.token
 echo Service Account %SERVICEACCOUNT_NAME%'s secret %SERVICEACCOUNT_SECRET_NAME%'s token is generate at %SERVICEACCOUNT_NAME%.token
 
-set QUERY_CURRENT_CONTEXT_CLUSTER="call kubectl config view current -o jsonpath={.contexts[0].context.cluster}"
+set QUERY_CURRENT_CONTEXT_CLUSTER="call kubectl config view current --minify=true -o jsonpath={.contexts[0].context.cluster}"
 for /F "tokens=*" %%G in ('%QUERY_CURRENT_CONTEXT_CLUSTER%') do set CURRENT_CLUSTER=%%G
 set CURRENT_CLUSTER=%CURRENT_CLUSTER: =%
 echo Current Kubernetes Configured Cluster in the Current Context is %CURRENT_CLUSTER%
