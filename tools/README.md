@@ -13,6 +13,8 @@ Tools
  - kubeconfig-ibm-updater.sh: linux shell script to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (IBM Cloud Kubernetes Service)
  
 How to use:
-Open the .sh or .bat file and change the SERVICEACCOUNT_NAME and SERVICEACCOUNT_NAMESPACE to your service account name and namespaces.
-Then run the script in the command line or shell. 
-At the end of this file, it will use kubectl version to check if new credential can access to your cluster.
+ - Step 1: set KUBECONFIG=<your kubeconfig path>
+ - Step 2: cd <your kubeconfig path>
+ - Step 3: Open the .sh or .bat file and change the SERVICEACCOUNT_NAME and SERVICEACCOUNT_NAMESPACE to your service account name and namespaces.
+ - Step 4: Then run the script in the windows command line (.bat) or linux shell (.sh). It will do some changes to your <kubeconfig> file.
+ - Step 5: Verify at the end of this file, it will use kubectl version to check if new credential can access to your cluster with your updated <kubeconfig> file.
