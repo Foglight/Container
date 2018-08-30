@@ -2,7 +2,7 @@
 This folder contains tools for Foglight for Container Management
 
 Prerequisite:
- - kubectl installed
+ - kubectl installed (https://kubernetes.io/docs/tasks/tools/install-kubectl/)
  - kubectl can connect to the kubernetes cluster
  - service account already exist
 
