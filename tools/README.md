@@ -4,7 +4,7 @@ This folder contains tools for Foglight for Container Management
 Prerequisite:
  - kubectl installed (https://kubernetes.io/docs/tasks/tools/install-kubectl/)
  - kubectl can connect to the kubernetes cluster (kubectl version, have both client and server version info.)
- - service account already exist
+ - service account already exist, refer to https://github.com/Foglight/Container/tree/master/serviceaccount for detail.
 
 Tools
  - kubeconfig-updater.bat: windows batch file to update default kubeconfig to Kubernetes Agent credential. supported cloud platforms (AKS, GKE, Openshift, EKS)
